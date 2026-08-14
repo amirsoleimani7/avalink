@@ -1,9 +1,15 @@
-import Image from "next/image";
+"use client"
+import { useState } from "react";
 
 export default function Home() {
-  return (
-    <div>
-      something
-    </div>
-  );
+  const [show, setshow] = useState<boolean>(false);
+  
+
+  setTimeout(() => {
+    setshow(true);    
+  }, 2000);
+  
+  if (show) {
+    return <p>main page</p>
+  }
 }
