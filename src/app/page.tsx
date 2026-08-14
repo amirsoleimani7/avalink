@@ -1,15 +1,13 @@
-"use client"
-import { useState } from "react";
+export default async function Home() {
+  const foo = (input: string) => {
+    console.log(input);
+  };
 
-export default function Home() {
-  const [show, setshow] = useState<boolean>(false);
-  
+  await new Promise((foo, reject) => {
+    setTimeout(() => {
+      foo("something");
+    }, 3000);
+  });
 
-  setTimeout(() => {
-    setshow(true);    
-  }, 2000);
-  
-  if (show) {
-    return <p>main page</p>
-  }
+  return <div>main page</div>;
 }
