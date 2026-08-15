@@ -9,8 +9,9 @@ export default async function Home() {
   // });
 
   return (
-    <div className="w-full h-full bg-green-400 flex  justify-center">
+    <div className="w-full h-full bg-black flex justify-center ">
       <Navigation />
-    </div>
+      
+  </div>
   );
 }
