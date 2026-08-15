@@ -13,7 +13,7 @@ export default function Navigation() {
       <span className="font-bungee text-3xl">AVA LINK</span>
 
       <div>
-        <button className=" h-full bg-white  px-2 py-1 rounded-xl duration-200 ease-in-out cursor-pointer hover:shadow-gray-500 hover:shadow-inner hover:bg-gray-300 active:scale-[.98]" >
+        <button className=" h-full bg-white  px-2 py-1 rounded-xl duration-200 ease-in-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
           <span className="text-sm text-black font-geist">Sign up free</span>
         </button>
       </div>
