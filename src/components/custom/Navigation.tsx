@@ -12,7 +12,6 @@ import { MenuData, MenuType, MenuLink } from "@/data/MenuItems";
 export default function Navigation() {
   return (
     <div className="fixed  w-full bg-black border-b border-gray-800 text-white flex items py-4  px-[15%] justify-between select-none">
-      
       <span className="font-bungee text-3xl duration-200 transition-all ease-in-out hover:text-gray-300 cursor-pointer">
         AVA LINK
       </span>
