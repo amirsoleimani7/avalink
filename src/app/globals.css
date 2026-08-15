@@ -13,10 +13,18 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist/Geist-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
 @theme {
   /* colors palletes */
-
   --font-bungee: "Bungee", serif;
+  --font-geist: "Geist", serif;
 }
 
 /* ------------------------- */

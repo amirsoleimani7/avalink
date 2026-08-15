@@ -14,7 +14,7 @@ export default function Navigation() {
 
       <div>
         <button className=" h-full bg-white  px-2 py-1 rounded-xl duration-200 ease-in-out cursor-pointer hover:shadow-gray-500 hover:shadow-inner hover:bg-gray-300 active:scale-[.98]" >
-          <span className="text-sm text-black">Sign up free</span>
+          <span className="text-sm text-black font-geist">Sign up free</span>
         </button>
       </div>
     </div>
