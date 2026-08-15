@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { GrResources } from "react-icons/gr";
 import { LuLayoutTemplate } from "react-icons/lu";
+import { FaLink } from "react-icons/fa6";
 
 export type MenuLink = {
   mLink: string;
@@ -18,16 +19,9 @@ export const MenuData: MenuType[] = [
     menuTrigger: "Products",
     menuLink: [
       {
-        mLink: "link1",
-        desc: "lorem asdasda  asd ad ",
-      },
-      {
-        mLink: "link2",
-        desc: "lorem asdasda  asd ad ",
-      },
-      {
-        mLink: "link3",
-        desc: "lorem asdasda  asd ad ",
+        mLink: "Link in Bio",
+        desc: "Create and customize your linktree",
+        icon: FaLink,
       },
     ],
   },

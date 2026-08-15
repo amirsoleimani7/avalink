@@ -27,7 +27,7 @@ export default function Navigation() {
                 <NavigationMenuContent>
                   {menuItem.menuLink.map((link: MenuLink, index: number) => (
                     <NavigationMenuLink
-                      className={"font-geist flex flex-col items-start w-60"}
+                      className={"font-geist flex flex-col items-start w-72"}
                       key={index}
                     >
                       <div className="flex items-center  gap-1">
