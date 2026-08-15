@@ -17,7 +17,7 @@ export default function Navigation() {
         AVA LINK
       </span>
 
-      <div className="max-md:hidden">
+      <div className="max-lg:hidden">
         <NavigationMenu className={""}>
           <NavigationMenuList>
             {MenuData.map((menuItem: MenuType, index: number) => (
@@ -46,7 +46,7 @@ export default function Navigation() {
       </div>
 
       <div className="flex gap-5">
-        <div className="flex gap-2 max-md:hidden">
+        <div className="flex gap-2 max-lg:hidden">
           <button className=" h-full   border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98] ">
             <span className="text-sm text-white font-geist">Login</span>
           </button>
@@ -55,10 +55,10 @@ export default function Navigation() {
           </button>
         </div>
 
-        <button className="hidden max-md:flex items-center justify-center  h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
+        <button className="hidden max-lg:flex items-center justify-center  h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
           <span className="text-sm text-black font-geist">Join us</span>
         </button>
-        <button className="hidden  max-md:flex items-center justify-center active:scale-[.98] cursor-pointer duration-200 ease-in-out transition-all ">
+        <button className="hidden  max-lg:flex items-center justify-center active:scale-[.98] cursor-pointer duration-200 ease-in-out transition-all ">
           <GiHamburgerMenu size={20} />
         </button>
       </div>
