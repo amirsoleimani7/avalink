@@ -1,4 +1,5 @@
 import TextType from "@/components/custom/typewriter";
+import Navigation from "@/components/custom/Navigation";
 
 export default async function Home() {
   // await new Promise((resolve, reject) => {
@@ -7,5 +8,9 @@ export default async function Home() {
   //   }, 10000);
   // });
 
-  return <div className="w-full h-full bg-gray-900"></div>;
+  return (
+    <div className="w-full h-full bg-green-400 flex  justify-center">
+      <Navigation />
+    </div>
+  );
 }
