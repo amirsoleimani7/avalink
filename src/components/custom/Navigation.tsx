@@ -17,7 +17,7 @@ export default function Navigation() {
       </span>
 
       <div className="">
-        <NavigationMenu>
+        <NavigationMenu className={""}>
           <NavigationMenuList>
             {MenuData.map((menuItem: MenuType, index: number) => (
               <NavigationMenuItem key={index}>

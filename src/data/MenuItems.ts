@@ -1,11 +1,11 @@
 import { IconType } from "react-icons";
 import { GrResources } from "react-icons/gr";
-
+import { LuLayoutTemplate } from "react-icons/lu";
 
 export type MenuLink = {
   mLink: string;
   desc: string;
-  icon ?: IconType;
+  icon?: IconType;
 };
 
 export type MenuType = {
@@ -36,17 +36,9 @@ export const MenuData: MenuType[] = [
     menuTrigger: "Templates",
     menuLink: [
       {
-        mLink: "link1",
-        desc: "lorem asdasda  asd ad ",
-      },
-      {
-        mLink: "link2",
-        desc: "lorem asdasda  asd ad ",
-      },
-      {
-        mLink: "link3",
-
-        desc: "lorem asdasda  asd ad ",
+        mLink: "Different Templates",
+        desc: "Explore different templates for different vibes!",
+        icon: LuLayoutTemplate,
       },
     ],
   },
@@ -57,7 +49,7 @@ export const MenuData: MenuType[] = [
       {
         mLink: "How to use Ava Link",
         desc: "this section teaches you how to fully setup your profile and sharing it",
-        icon : GrResources
+        icon: GrResources,
       },
     ],
   },
