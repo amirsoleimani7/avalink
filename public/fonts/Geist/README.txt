@@ -1,4 +1,4 @@
-Geist Variable Font
+sGeist Variable Font
 ===================
 
 This download contains Geist as both variable fonts and static fonts.
