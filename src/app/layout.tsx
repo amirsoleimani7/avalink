@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: "اوا لینک | %s",
-    default: "اوا لینک",
+    template: "avalink | %s",
+    default: "avalink",
   },
 
-  description: "پلتفرم اشتراک گذاری آدرس  شبکه‌های اجتماعی",
+  description: "A plaform for sharing your social media links",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

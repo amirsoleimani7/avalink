@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "لاگین",
-  description: "پلتفرم اشتراک گذاری آدرس  شبکه‌های اجتماعی",
+  title: "Login",
+  description: "A plaform for sharing your social media links",
 };
 
 export default function Login() {
