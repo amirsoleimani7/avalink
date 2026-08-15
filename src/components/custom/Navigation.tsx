@@ -15,7 +15,7 @@ export default function Navigation() {
       <span className="font-bungee text-3xl duration-200 transition-all ease-in-out hover:text-gray-300 cursor-pointer">
         AVA LINK
       </span>
-      
+
       <div className="">
         <NavigationMenu>
           <NavigationMenuList>
@@ -26,8 +26,15 @@ export default function Navigation() {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   {menuItem.menuLink.map((link: MenuLink, index: number) => (
-                    <NavigationMenuLink className={"font-geist"} key={index}>
-                      {link.mLink}
+                    <NavigationMenuLink
+                      className={"font-geist flex flex-col items-start w-60"}
+                      key={index}
+                    >
+                      <div className="flex items-center  gap-1">
+                        {link.icon && <link.icon />}
+                        <h1 className="text-white font-bold">{link.mLink}</h1>
+                      </div>
+                      <p className="text-gray-300">{link.desc}</p>
                     </NavigationMenuLink>
                   ))}
                 </NavigationMenuContent>

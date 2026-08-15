@@ -1,5 +1,11 @@
+import { IconType } from "react-icons";
+import { GrResources } from "react-icons/gr";
+
+
 export type MenuLink = {
   mLink: string;
+  desc: string;
+  icon ?: IconType;
 };
 
 export type MenuType = {
@@ -13,12 +19,15 @@ export const MenuData: MenuType[] = [
     menuLink: [
       {
         mLink: "link1",
+        desc: "lorem asdasda  asd ad ",
       },
       {
         mLink: "link2",
+        desc: "lorem asdasda  asd ad ",
       },
       {
         mLink: "link3",
+        desc: "lorem asdasda  asd ad ",
       },
     ],
   },
@@ -28,12 +37,16 @@ export const MenuData: MenuType[] = [
     menuLink: [
       {
         mLink: "link1",
+        desc: "lorem asdasda  asd ad ",
       },
       {
         mLink: "link2",
+        desc: "lorem asdasda  asd ad ",
       },
       {
         mLink: "link3",
+
+        desc: "lorem asdasda  asd ad ",
       },
     ],
   },
@@ -42,13 +55,9 @@ export const MenuData: MenuType[] = [
     menuTrigger: "Learn",
     menuLink: [
       {
-        mLink: "link1",
-      },
-      {
-        mLink: "link2",
-      },
-      {
-        mLink: "link3",
+        mLink: "How to use Ava Link",
+        desc: "this section teaches you how to fully setup your profile and sharing it",
+        icon : GrResources
       },
     ],
   },
