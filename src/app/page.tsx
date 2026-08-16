@@ -1,6 +1,6 @@
 import TextType from "@/components/custom/typewriter";
 import Navigation from "@/components/custom/Navigation";
-import Grainient from "@/components/custom/Granient";
+import HeroSection from "@/components/custom/HeroSection";
 
 export default async function Home() {
   // await new Promise((resolve, reject) => {
@@ -10,8 +10,9 @@ export default async function Home() {
   // });
 
   return (
-    <div className="w-full h-full relative ">
+    <div className="w-full h-full relative flex flex-col">
       <Navigation />
+      <HeroSection />
     </div>
   );
 }

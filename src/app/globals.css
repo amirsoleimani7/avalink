@@ -20,14 +20,22 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf/")
+    format("truetype");
+  font-display: swap;
+  font-weight: bold;
+  font-style: normal;
+}
 
 @theme {
   /* fonts */
   --font-bungee: "Bungee", serif;
   --font-geist: "Geist", serif;
-
+  --font-roboto: "Roboto", serif;
   /* colors palletes */
-
+  
   /* shadows */
   --inset-shadow-md: inset 0 2px 3px rgba(0, 0, 0, 0.3);
 }
