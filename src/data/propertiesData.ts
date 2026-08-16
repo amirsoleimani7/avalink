@@ -3,6 +3,8 @@ import { IoExtensionPuzzleSharp } from "react-icons/io5";
 import { SiCssdesignawards } from "react-icons/si";
 import { FaRocket } from "react-icons/fa";
 import { IoOptionsSharp } from "react-icons/io5";
+import { BsFillLightningChargeFill } from "react-icons/bs";
+
 
 export type PropertiesType = {
   icon: IconType;
@@ -22,7 +24,7 @@ export const PropertiesData: PropertiesType[] = [
     desc: "Modern yet professional desgin and rich temaplte library that you can choose from",
   },
   {
-    icon: FaRocket,
+    icon: BsFillLightningChargeFill,
     text: "Performance",
     desc: "Lightning-fast load times and 99.9% uptime ensure your links always work when your audience needs them.",
   },

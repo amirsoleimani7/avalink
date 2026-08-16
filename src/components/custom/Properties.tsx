@@ -20,7 +20,7 @@ export default function Properties() {
             key={index}
           >
             <propData.icon
-              className="text-main-secondary w-1/2 h-1/2 mt-5 group-hover:text-white duration-200 ease-in-out transition-all group-hover:rotate-6 "
+              className="text-main-secondary w-1/2 h-1/2 mt-5 group-hover:text-white duration-200 ease-in-out transition-all group-hover:rotate-3"
           />
             <div className="mt-20 h-1/2 group">
               <h1 className="text-sm ">{propData.text}</h1>

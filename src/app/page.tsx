@@ -2,6 +2,7 @@ import TextType from "@/components/custom/typewriter";
 import Navigation from "@/components/custom/Navigation";
 import HeroSection from "@/components/custom/HeroSection";
 import Properties from "@/components/custom/Properties";
+
 export default async function Home() {
   // await new Promise((resolve, reject) => {
   //   setTimeout(() => {
