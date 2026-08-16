@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { DiResponsive } from "react-icons/di";
+import { MdOutlinePhoneIphone } from "react-icons/md";
 import { SiBrandfetch } from "react-icons/si";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 
@@ -10,7 +10,7 @@ export type HeroType = {
 
 export const HeroTags: HeroType[] = [
   {
-    icon: DiResponsive,
+    icon: MdOutlinePhoneIphone,
     text: "responsive",
   },
   {

@@ -1,7 +1,7 @@
 import TextType from "@/components/custom/typewriter";
 import Navigation from "@/components/custom/Navigation";
 import HeroSection from "@/components/custom/HeroSection";
-
+import Properties from "@/components/custom/Properties";
 export default async function Home() {
   // await new Promise((resolve, reject) => {
   //   setTimeout(() => {
@@ -13,6 +13,7 @@ export default async function Home() {
     <div className="w-full h-full relative flex flex-col">
       <Navigation />
       <HeroSection />
+      <Properties />
     </div>
   );
 }
