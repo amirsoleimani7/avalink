@@ -10,7 +10,7 @@ export default async function Home() {
   // });
 
   return (
-    <div className="w-full h-full relative flex flex-col">
+    <div className="w-full h-[200vh] relative flex flex-col ">
       <Navigation />
       <HeroSection />
       <Properties />
