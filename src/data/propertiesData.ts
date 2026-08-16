@@ -5,7 +5,6 @@ import { FaRocket } from "react-icons/fa";
 import { IoOptionsSharp } from "react-icons/io5";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 
-
 export type PropertiesType = {
   icon: IconType;
   text: string;
