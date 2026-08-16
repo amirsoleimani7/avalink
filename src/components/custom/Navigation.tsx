@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { MenuData, MenuType, MenuLink } from "@/data/MenuItems";
-import { GiHamburgerMenu } from "react-icons/gi";
-
+import SideBarNavigation from "./SideBarNavigation";
+ 
 export default function Navigation() {
   return (
     <div className="fixed  w-full bg-black border-b border-gray-800 text-white flex items py-4  px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] justify-between select-none">
@@ -58,9 +58,9 @@ export default function Navigation() {
         <button className="hidden max-lg:flex items-center justify-center  h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
           <span className="text-sm text-black font-geist">Join us</span>
         </button>
-        <button className="hidden  max-lg:flex items-center justify-center active:scale-[.98] cursor-pointer duration-200 ease-in-out transition-all ">
-          <GiHamburgerMenu size={20} />
-        </button>
+
+          <SideBarNavigation/>
+       
       </div>
     </div>
   );
