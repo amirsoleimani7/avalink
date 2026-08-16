@@ -19,9 +19,16 @@ export default function SideBarNavigation() {
         {showSide ? <MdClose size={20} /> : <GiHamburgerMenu size={20} />}
       </button>
       {showSide ? (
-        <div className="absolute w-screen h-screen left-0 top-18 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] hidden max-lg:flex flex-col bg-black backdrop-blur-3xl font-geist">
-          {MenuData.map((menuItem: MenuType, index: number) => (
-            <h1>{menuItem.menuTrigger}</h1>
+        <div className="absolute w-screen h-screen left-0 top-18 pt-4 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] hidden max-lg:flex flex-col bg-black backdrop-blur-3xl font-geist">
+          {MenuData.map((link: MenuType, index: number) => (
+            <div>
+              <h1>{link.menuTrigger}</h1>
+              <div>
+                {link.menuLink.map((i: MenuLink, index: number) => (
+                  <p>{i.mLink}</p>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       ) : (

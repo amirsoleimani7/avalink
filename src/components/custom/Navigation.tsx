@@ -26,7 +26,9 @@ export default function Navigation() {
                   {menuItem.menuTrigger}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
+                  
                   {menuItem.menuLink.map((link: MenuLink, index: number) => (
+                    
                     <NavigationMenuLink
                       className={"font-geist flex flex-col items-start w-72"}
                       key={index}
@@ -34,10 +36,11 @@ export default function Navigation() {
                       <div className="flex items-center  gap-1">
                         {link.icon && <link.icon />}
                         <h1 className="text-white font-bold">{link.mLink}</h1>
-                      </div>
+                      </div>                      
                       <p className="text-gray-300">{link.desc}</p>
                     </NavigationMenuLink>
                   ))}
+                  
                 </NavigationMenuContent>
               </NavigationMenuItem>
             ))}
