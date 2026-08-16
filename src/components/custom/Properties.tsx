@@ -2,8 +2,8 @@ import { PropertiesData, PropertiesType } from "@/data/propertiesData";
 
 export default function Properties() {
   return (
-    <div className="w-full px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] select-none">
-      <div className="rounded-2xl border  w-full divide-x grid grid-cols-4 max-lg:grid-cols-2 max-lg:divide-y-0 max-lg:divide-x-0  max-sm:grid-cols-1 max-sm:divide-x-0 max-sm:divide-y overflow-hidden ">
+    <div className="w-full px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] select-none ">
+      <div className="rounded-2xl border  w-full divide-x grid grid-cols-4 max-lg:grid-cols-2 max-lg:divide-y-0 max-lg:divide-x-0  max-sm:grid-cols-1 max-sm:divide-x-0 max-sm:divide-y overflow-hidden bg-[url(/img/bg/gggrain5.svg)]">
         {PropertiesData.map((propData: PropertiesType, index: number) => (
           <div
             className="w-full h-full font-geist p-5 flex flex-col justify-center items-center
