@@ -24,9 +24,9 @@ export default function SideBarNavigation() {
       <AnimatePresence>
         {showSide && (
           <motion.div
-            initial={{ opacity: 0, filter: "blur(5px)", y: 5 }}
+            initial={{ opacity: 0, filter: "blur(3px)", y: 5 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-            exit={{ opacity: 0, filter: "blur(5px)", y: -5 }}
+            exit={{ opacity: 0, filter: "blur(3px)", y: -5 }}
             transition={{
               duration: 0.1,
             }}

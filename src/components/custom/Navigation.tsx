@@ -9,14 +9,13 @@ import {
 
 import { MenuData, MenuType, MenuLink } from "@/data/MenuItems";
 import SideBarNavigation from "./SideBarNavigation";
- 
+
 export default function Navigation() {
   return (
-    <div className="fixed w-full bg-black border-b border-gray-800 text-white flex items py-4  px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] justify-between select-none">
+    <div className="fixed w-full  border-b border-gray-800 text-white flex items py-4  px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] justify-between select-none">
       <span className="font-bungee text-3xl duration-200 transition-all ease-in-out hover:text-gray-300 cursor-pointer">
         AVA LINK
       </span>
-
       <div className="max-lg:hidden">
         <NavigationMenu className={""}>
           <NavigationMenuList>
@@ -26,9 +25,7 @@ export default function Navigation() {
                   {menuItem.menuTrigger}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  
                   {menuItem.menuLink.map((link: MenuLink, index: number) => (
-                    
                     <NavigationMenuLink
                       className={"font-geist flex flex-col items-start w-72"}
                       key={index}
@@ -36,11 +33,10 @@ export default function Navigation() {
                       <div className="flex items-center  gap-1">
                         {link.icon && <link.icon />}
                         <h1 className="text-white font-bold">{link.mLink}</h1>
-                      </div>                      
+                      </div>
                       <p className="text-gray-300">{link.desc}</p>
                     </NavigationMenuLink>
                   ))}
-                  
                 </NavigationMenuContent>
               </NavigationMenuItem>
             ))}
@@ -62,8 +58,7 @@ export default function Navigation() {
           <span className="text-sm text-black font-geist">Join us</span>
         </button>
 
-          <SideBarNavigation/>
-       
+        <SideBarNavigation />
       </div>
     </div>
   );
