@@ -14,13 +14,22 @@ export default function Properties() {
              
              max-sm:nth-[1]:border-r-0 
              max-sm:nth-[3]:border-r-0 max-sm:nth-[3]:border-b
-            "
+              group
+              duration-200 ease-in-out transition-all 
+               "
             key={index}
           >
-            <propData.icon className="text-main-secondary w-1/2 h-1/2 mt-5 " />
-            <div className="mt-20 h-1/2 ">
-              <h1 className="text-sm">{propData.text}</h1>
-              <p className="text-main-secondary text-xs">{propData.desc}</p>
+            <propData.icon
+              className="text-main-secondary w-1/2 h-1/2 mt-5 group-hover:text-white duration-200 ease-in-out transition-all group-hover:rotate-6 "
+          />
+            <div className="mt-20 h-1/2 group">
+              <h1 className="text-sm ">{propData.text}</h1>
+              <p
+                className="text-main-secondary text-xs group-hover:text-white duration-200 ease-in-out transition-all
+"
+              >
+                {propData.desc}
+              </p>
             </div>
           </div>
         ))}
