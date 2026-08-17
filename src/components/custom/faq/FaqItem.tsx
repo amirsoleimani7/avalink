@@ -9,7 +9,7 @@ export default function FaqItem() {
   return (
     <div className="p-5 mt-5 rounded-xl border bg-main-bg w-full duration-200 ease-in-out transition-all hover:border-gray-800">
       <div
-        className="flex items-center justify-between select-none cursor-pointer "
+        className="flex items-center justify-between select-none cursor-pointer group"
         onClick={() => {
           setShow(!show);
         }}
@@ -18,7 +18,7 @@ export default function FaqItem() {
         <button>
           <FiPlus
             size={20}
-            className={`${show ? "rotate-45" : "  "} duration-200 transition-all ease-in-out`}
+            className={`${show ? "rotate-45" : "  "} duration-200 transition-all ease-in-out  text-main-secondary group-hover:text-white`}
           />
         </button>{" "}
       </div>
