@@ -35,7 +35,7 @@ export default function Navigation() {
                         {link.icon && <link.icon />}
                         <h1 className="text-white font-bold">{link.mLink}</h1>
                       </div>
-                      <p className="text-gray-300">{link.desc}</p>
+                      <p className="text-main-secondary">{link.desc}</p>
                     </NavigationMenuLink>
                   ))}
                 </NavigationMenuContent>
