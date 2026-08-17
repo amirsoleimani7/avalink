@@ -35,7 +35,7 @@ export default function Properties() {
       <span className="mx-auto mt-2 text-main-secondary group font-geist text-xs">
         More than{" "}
         <span className="font-geist text-main-secondary ease-in-out duration-200 transition-all group-hover:text-white">
-          23
+          X
         </span>{" "}
         people use avalink
       </span>
