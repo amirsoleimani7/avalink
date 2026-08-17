@@ -2,7 +2,7 @@ import { FiPlus } from "react-icons/fi";
 
 export default function FaqItem() {
   return (
-    <div>
+    <div className="p-5 rounded-xl border bg-main-bg">
       <div className="flex items-center justify-between">
         <h1 className="font-geist text-2xl">why use linktree</h1>
         <button>

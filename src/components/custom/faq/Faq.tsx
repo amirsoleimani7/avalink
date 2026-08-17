@@ -1,3 +1,4 @@
+import FaqItem from "./FaqItem";
 
 export default function Faq() {
   return (
@@ -6,9 +7,7 @@ export default function Faq() {
       <p className="font-geist text-main-secondary">
         Find answers to common questions about our platform, and process
       </p>
-      <div className="p-5 rounded-xl border bg-main-bg">
-        
-      </div>
+      <FaqItem />
     </div>
   );
 }
