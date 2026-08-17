@@ -1,7 +1,7 @@
-import TextType from "@/components/custom/typewriter";
-import Navigation from "@/components/custom/Navigation";
-import HeroSection from "@/components/custom/HeroSection";
-import Properties from "@/components/custom/Properties";
+import TextType from "@/components/custom/addons/typewriter";
+import Navigation from "@/components/custom/navigation/Navigation";
+import HeroSection from "@/components/custom/main/HeroSection";
+import Properties from "@/components/custom/main/Properties";
 import Faq from "@/components/custom/faq/Faq";
 
 export default async function Home() {
@@ -12,11 +12,12 @@ export default async function Home() {
   // });
 
   return (
-    <div className="w-full h-[200vh] relative flex flex-col ">
+    <div className="w-full relative flex flex-col ">
       <Navigation />
       <HeroSection />
       <Properties />
       <Faq />
+      
     </div>
   );
 }
