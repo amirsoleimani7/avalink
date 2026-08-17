@@ -5,7 +5,9 @@ export default function Footer() {
         <span className="font-bungee text-xl duration-200 transition-all ease-in-out hover:text-gray-300 cursor-pointer">
           AVA LINK
         </span>
-        <p className="font-geist text-xs text-main-secondary duration-200 transition-all ease-in-out hover:text-white cursor-pointer">© 2026 AvaLink, LLC. All rights reserved</p>
+        <p className="font-geist text-xs text-main-secondary duration-200 transition-all ease-in-out hover:text-white cursor-pointer">
+          © 2026 AvaLink, LLC. All rights reserved
+        </p>
       </div>
     </div>
   );
