@@ -2,6 +2,7 @@ import TextType from "@/components/custom/typewriter";
 import Navigation from "@/components/custom/Navigation";
 import HeroSection from "@/components/custom/HeroSection";
 import Properties from "@/components/custom/Properties";
+import Faq from "@/components/custom/faq/Faq";
 
 export default async function Home() {
   // await new Promise((resolve, reject) => {
@@ -15,6 +16,7 @@ export default async function Home() {
       <Navigation />
       <HeroSection />
       <Properties />
+      <Faq />
     </div>
   );
 }
