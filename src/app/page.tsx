@@ -3,6 +3,7 @@ import Navigation from "@/components/custom/navigation/Navigation";
 import HeroSection from "@/components/custom/main/HeroSection";
 import Properties from "@/components/custom/main/Properties";
 import Faq from "@/components/custom/faq/Faq";
+import Footer from "@/components/custom/footer/Footer";
 
 export default async function Home() {
   // await new Promise((resolve, reject) => {
@@ -17,7 +18,7 @@ export default async function Home() {
       <HeroSection />
       <Properties />
       <Faq />
-      
-    </div>
+      <Footer/>
+          </div>
   );
 }
