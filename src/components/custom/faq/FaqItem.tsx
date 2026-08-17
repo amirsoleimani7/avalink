@@ -2,19 +2,20 @@
 import { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import AnimateHeight from "react-animate-height";
+import { faqType } from "@/data/faqData";
 
-export default function FaqItem() {
+export default function FaqItem(faqitem: faqType) {
   const [show, setShow] = useState<boolean>(false);
 
   return (
-    <div className="p-5 mt-5 rounded-xl border bg-main-bg w-full duration-200 ease-in-out transition-all hover:border-gray-800">
+    <div className="p-5 mt-3 rounded-xl border bg-main-bg w-full duration-200 ease-in-out transition-all hover:border-gray-800">
       <div
         className="flex items-center justify-between select-none cursor-pointer group"
         onClick={() => {
           setShow(!show);
         }}
       >
-        <h1 className="font-geist text-xl">why use linktree</h1>
+        <h1 className="font-geist text-lg">{faqitem.Question}</h1>
         <button>
           <FiPlus
             size={20}
@@ -28,14 +29,7 @@ export default function FaqItem() {
         duration={200}
         height={show ? "auto" : 0}
       >
-        <p className="font-geist text-main-secondary mt-5">
-          It's true. Nearly everything is technically free online. But so is the
-          ability to learn brain surgery on YouTube. And so is the content you
-          pay tens of thousands of dollars to university for. The question isn't
-          whether information exists, it's whether you can find the right
-          information, in the right order, at the right depth, in time for your
-          interview.
-        </p>
+        <p className="font-geist text-main-secondary mt-5">{faqitem.Awnser}</p>
       </AnimateHeight>
     </div>
   );

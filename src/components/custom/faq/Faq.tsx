@@ -1,4 +1,5 @@
 import FaqItem from "./FaqItem";
+import { faqType, faqData } from "@/data/faqData";
 
 export default function Faq() {
   return (
@@ -7,7 +8,11 @@ export default function Faq() {
       <p className="font-geist text-main-secondary">
         Find answers to common questions about our platform, and process
       </p>
-      <FaqItem />
+      <div className="flex flex-col  w-full">
+        {faqData.map((item: faqType, index: number) => (
+          <FaqItem {...item} key={index}/>
+        ))}
+      </div>
     </div>
   );
 }
