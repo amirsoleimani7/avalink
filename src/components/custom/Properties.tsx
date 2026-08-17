@@ -32,7 +32,7 @@ export default function Properties() {
           </div>
         ))}
       </div>
-      <span className="mx-auto mt-2 text-main-secondary group font-geist text-sm">
+      <span className="mx-auto mt-2 text-main-secondary group font-geist text-xs">
         More than{" "}
         <span className="font-geist text-main-secondary ease-in-out duration-200 transition-all group-hover:text-white">
           23
