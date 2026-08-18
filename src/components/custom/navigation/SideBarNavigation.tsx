@@ -48,7 +48,10 @@ export default function SideBarNavigation() {
                 <h1 className="text-[15px]">{link.menuTrigger}</h1>
                 <div className="pl-2 text-gray-400 duration-200 ease-out transition-all hover:text-white cursor-pointer">
                   {link.menuLink.map((i: MenuLink, index: number) => (
-                    <Link href={i.href} key={index} prefetch >
+                    <Link href={i.href} key={index} prefetch 
+                    onClick={() => {
+                      setShowSide(false);
+                    }}>
                       <p className="text-sm">{i.mLink}</p>
                     </Link>
                   ))}
