@@ -7,6 +7,7 @@ export type MenuLink = {
   mLink: string;
   desc: string;
   icon?: IconType;
+  href: string;
 };
 
 export type MenuType = {
@@ -22,6 +23,7 @@ export const MenuData: MenuType[] = [
         mLink: "Link in Bio",
         desc: "Create and customize your linktree",
         icon: FaLink,
+        href: "/products",
       },
     ],
   },
@@ -33,6 +35,7 @@ export const MenuData: MenuType[] = [
         mLink: "Different Templates",
         desc: "Explore different templates for different vibes!",
         icon: LuLayoutTemplate,
+        href: "/templates",
       },
     ],
   },
@@ -44,6 +47,7 @@ export const MenuData: MenuType[] = [
         mLink: "How to use Ava Link",
         desc: "this section teaches you how to fully setup your profile and sharing it",
         icon: GrResources,
+        href: "/learn",
       },
     ],
   },
