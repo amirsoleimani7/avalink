@@ -29,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="w-full h-screen">
+      <body className="w-full h-screen flex flex-col">
         <Navigation />
         {children}
         <Footer />

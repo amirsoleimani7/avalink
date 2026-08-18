@@ -14,11 +14,9 @@ export default async function Home() {
 
   return (
     <div className="w-full relative flex flex-col ">
-      <Navigation />
       <HeroSection />
       <Properties />
       <Faq />
-      <Footer/>
-          </div>
+    </div>
   );
 }
