@@ -6,12 +6,6 @@ import Faq from "@/components/custom/faq/Faq";
 import Footer from "@/components/custom/footer/Footer";
 
 export default async function Home() {
-  // await new Promise((resolve, reject) => {
-  //   setTimeout(() => {
-  //     resolve("something");
-  //   }, 10000);
-  // });
-
   return (
     <div className="w-full relative flex flex-col ">
       <HeroSection />

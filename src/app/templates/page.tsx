@@ -4,6 +4,13 @@ export const metadata: Metadata = {
   description: "A libray with different avalink temapltes",
 };
 
-export default function Templates() {
-  return <div>temapltes</div>;
+export default async function Templates() {
+  await new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("something");
+
+    }, 2000);
+  });
+
+  return <div className="text-white w-full h-full  mt-17">temapltes</div>;
 }

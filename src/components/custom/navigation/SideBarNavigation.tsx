@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { MenuData, MenuType, MenuLink } from "@/data/MenuItems";
-
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function SideBarNavigation() {
@@ -48,10 +47,14 @@ export default function SideBarNavigation() {
                 <h1 className="text-[15px]">{link.menuTrigger}</h1>
                 <div className="pl-2 text-gray-400 duration-200 ease-out transition-all hover:text-white cursor-pointer">
                   {link.menuLink.map((i: MenuLink, index: number) => (
-                    <Link href={i.href} key={index} prefetch 
-                    onClick={() => {
-                      setShowSide(false);
-                    }}>
+                    <Link
+                      href={i.href}
+                      key={index}
+                      prefetch
+                      onClick={() => {
+                        setShowSide(false);
+                      }}
+                    >
                       <p className="text-sm">{i.mLink}</p>
                     </Link>
                   ))}
