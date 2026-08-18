@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import { MenuData, MenuType, MenuLink } from "@/data/MenuItems";
@@ -30,7 +31,7 @@ export default function SideBarNavigation() {
             transition={{
               duration: 0.1,
             }}
-className="absolute w-screen h-screen left-0 top-17 pt-4 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] hidden max-lg:flex flex-col backdrop-blur-2xl bg-black font-geist z-20"
+            className="absolute w-screen h-screen left-0 top-17 pt-4 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] hidden max-lg:flex flex-col backdrop-blur-2xl bg-black font-geist z-20"
           >
             <div className="flex w-full gap-2 mb-5 ">
               <button className="w-1/3 h-full  border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98] ">
@@ -47,9 +48,9 @@ className="absolute w-screen h-screen left-0 top-17 pt-4 px-[15%] max-xl:px-[10%
                 <h1 className="text-[15px]">{link.menuTrigger}</h1>
                 <div className="pl-2 text-gray-400 duration-200 ease-out transition-all hover:text-white cursor-pointer">
                   {link.menuLink.map((i: MenuLink, index: number) => (
-                    <p className="text-sm" key={index}>
-                      {i.mLink}
-                    </p>
+                    <Link href={i.href} key={index} prefetch >
+                      <p className="text-sm">{i.mLink}</p>
+                    </Link>
                   ))}
                 </div>
               </div>
