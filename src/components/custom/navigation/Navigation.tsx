@@ -14,9 +14,11 @@ import SideBarNavigation from "./SideBarNavigation";
 export default function Navigation() {
   return (
     <div className="fixed w-full z-10 backdrop-blur-2xl border-b border-gray-800 text-white flex items py-4  px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] justify-between select-none">
-      <span className="font-bungee text-3xl duration-200 transition-all ease-in-out hover:text-gray-300 cursor-pointer">
-        AVA LINK
-      </span>
+      <Link href={"/"} prefetch>
+        <span className="font-bungee text-3xl duration-200 transition-all ease-in-out hover:text-gray-300 cursor-pointer">
+          AVA LINK
+        </span>
+      </Link>
       <div className="max-lg:hidden">
         <NavigationMenu className={""}>
           <NavigationMenuList>
