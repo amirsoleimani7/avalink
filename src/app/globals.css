@@ -38,6 +38,7 @@
   /* colors palletes */
   --color-main-secondary: #a3a3a3;
   --color-main-bg: #171717;
+  --color-main-hover: #1e1e1e;
 
   /* shadows */
   --inset-shadow-md: inset 0 2px 3px rgba(0, 0, 0, 0.3);
