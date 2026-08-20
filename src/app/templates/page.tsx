@@ -2,15 +2,18 @@ import { Metadata } from "next";
 
 import HeaderBtn from "@/components/custom/template/HeaderButtons/HeaderBtn";
 import FilterList from "@/components/custom/template/FilterList";
+import TemplateItem from "@/components/custom/template/TemplateItem";
 
 export const metadata: Metadata = {
   title: "Templates",
   description: "A libray with different avalink temapltes",
 };
 
+const listItem = [1, 2, 3, , 2, 3, 3, 4, 4];
+
 export default function Templates() {
   return (
-    <div className="flex flex-col  items-center w-full h-full pt-10 mt-17 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%]">
+    <div className="flex flex-col  items-center w-full  pt-10 mt-17 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%]">
       <div className="font-geist  flex flex-col gap-4 items-center">
         <h1 className="font-bold text-4xl text-center max-lg:text-3xl ">
           An AvaLink template to suit every brand and creator.
@@ -23,8 +26,20 @@ export default function Templates() {
         </p>
         <HeaderBtn />
       </div>
-
       <FilterList />
+      <div className="w-full h-full grid grid-cols-2 gap-2">
+        {listItem.map(() => {
+          return <TemplateItem />;
+        })}
+      </div>
     </div>
   );
 }
+
+/*
+      <div className="w-full h-full grid grid-cols-2 gap-2">
+        {listItem.map(() => {
+          return <TemplateItem />;
+        })}
+      </div>
+ */
