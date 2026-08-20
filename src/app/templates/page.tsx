@@ -28,7 +28,7 @@ export default function Templates() {
         <HeaderBtn />
       </div>
       <FilterList />
-      <div className="w-full gap-2  grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  mt-5">
+      <div className="w-full gap-2  grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  my-5">
         {listItem.map((item, index: number) => {
           return <TemplateItem key={index} />;
         })}

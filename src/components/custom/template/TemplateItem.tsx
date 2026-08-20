@@ -1,7 +1,7 @@
 export default function TemplateItem() {
   return (
-    <div className="  bg-main-hover  group   border ">
-      <div className="w-full bg-black ">
+    <div className="bg-main-hover group rounded-xl overflow-hidden border ">
+      <div className="w-full">
         <img
           src="https://placehold.co/600x400/transparent/F00"
           alt=""
@@ -9,16 +9,21 @@ export default function TemplateItem() {
         />
       </div>
       <div className="flex flex-col mt-5 ">
-        <div className=" ">
-          <h1 className="font-geist text-white font-bold ">card Title</h1>
+        <div className="py-5 px-2 bg-main-bg">
+          <div>
+              <h1 className="font-geist  text-white font-semibold">card Title</h1>
+              <div className="bg-main-hover">
+                
+              </div>
+          </div>
           <p className="card descrition text-main-secondary font-geist">
             card descrition
           </p>
         </div>
 
-        <div className="w-full p-2 bg-main-secondary flex justify-center items-cener">
+        <div className="w-full p-4 bg-main-hover flex justify-center items-cener">
           <button className="w-full  bg-white px-2 py-1 rounded-lg duration-200 ease-out my-auto cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
-            <span className="text-sm text-black font-geist">Sign up free</span>
+            <span className="text-sm text-black font-geist">get Template</span>
           </button>
         </div>
       </div>
