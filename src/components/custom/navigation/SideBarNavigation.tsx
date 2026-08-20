@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
-import { MenuData, MenuType, MenuLink } from "@/data/MenuItems";
+import { MenuData, MenuType, MenuLink } from "@/data/menuData";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function SideBarNavigation() {

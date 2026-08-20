@@ -8,11 +8,10 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import Link from "next/link";
-import { MenuData, MenuType, MenuLink } from "@/data/MenuItems";
+import { MenuData, MenuType, MenuLink } from "@/data/menuData";
 import SideBarNavigation from "./SideBarNavigation";
 
 export default function Navigation() {
-
   return (
     <div className="fixed w-full z-10 backdrop-blur-2xl border-b  text-white flex items py-4  px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] justify-between select-none">
       <Link href={"/"} prefetch>
