@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import HeaderBtn from "@/components/custom/template/HeaderButtons/HeaderBtn";
 import FilterList from "@/components/custom/template/FilterList";
 import TemplateItem from "@/components/custom/template/TemplateItem";
+import { number } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Templates",
@@ -27,9 +28,9 @@ export default function Templates() {
         <HeaderBtn />
       </div>
       <FilterList />
-      <div className="w-full h-full grid grid-cols-2 gap-2">
-        {listItem.map(() => {
-          return <TemplateItem />;
+      <div className="w-full h-full grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-2 mt-5">
+        {listItem.map((item, index: number) => {
+          return <TemplateItem key={index} />;
         })}
       </div>
     </div>
