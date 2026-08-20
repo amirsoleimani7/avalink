@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Link from "next/link";
+import HeaderBtn from "./HeaderButtons/HeaderBtn";
 
 export const metadata: Metadata = {
   title: "Templates",
@@ -19,28 +19,20 @@ export default function Templates() {
           Explore our library of custom templates to grow and connect with your
           audience even more easily!
         </p>
-        <div className="flex gap-5 w-full justify-center items-center">
-          <button className="  bg-white px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
-            <span className="text-sm text-black font-geist">
-              Browse temapltes
-            </span>
-          </button>
-          <Link prefetch href={"learn"}>
-            <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-              <span className="text-sm text-white font-geist">Learn</span>
-            </button>
-          </Link>
-        </div>
+        <HeaderBtn />
       </div>
 
       <div className="w-full mt-10 flex gap-4 flex-wrap">
-        
         <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer   hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm  text-main-secondary font-geist">All temapltes</span>
+          <span className="text-sm  text-main-secondary font-geist">
+            All temapltes
+          </span>
         </button>
-         
+
         <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">Fashion</span>
+          <span className="text-sm text-main-secondary font-geist">
+            Fashion
+          </span>
         </button>
 
         <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
@@ -50,7 +42,9 @@ export default function Templates() {
         </button>
 
         <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary  font-geist">Marketing</span>
+          <span className="text-sm text-main-secondary  font-geist">
+            Marketing
+          </span>
         </button>
         <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
           <span className="text-sm text-main-secondary font-geist">Music</span>

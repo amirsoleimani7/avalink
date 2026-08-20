@@ -47,6 +47,7 @@
 * {
   scrollbar-color: #333232 black;
   scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 /* ------------------------- */
