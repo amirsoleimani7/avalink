@@ -1,5 +1,8 @@
 import { Metadata } from "next";
-import HeaderBtn from "./HeaderButtons/HeaderBtn";
+
+import HeaderBtn from "@/components/custom/template/HeaderButtons/HeaderBtn";
+
+
 
 export const metadata: Metadata = {
   title: "Templates",
