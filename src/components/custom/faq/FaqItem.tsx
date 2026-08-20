@@ -15,7 +15,7 @@ export default function FaqItem(faqitem: faqType) {
           setShow(!show);
         }}
       >
-        <h1 className="font-geist text-lg">{faqitem.Question}</h1>
+        <h1 className="font-geist text-sm">{faqitem.Question}</h1>
         <button>
           <FiPlus
             size={20}
