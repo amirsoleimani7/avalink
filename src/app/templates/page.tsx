@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 
 import HeaderBtn from "@/components/custom/template/HeaderButtons/HeaderBtn";
-
-
+import FilterList from "@/components/custom/template/FilterList";
 
 export const metadata: Metadata = {
   title: "Templates",
@@ -16,7 +15,7 @@ export default function Templates() {
         <h1 className="font-bold text-4xl text-center max-lg:text-3xl ">
           An AvaLink template to suit every brand and creator.
         </h1>
-        <p className="text-main-secondary text-center w-2/3 max-lg:w-full ">
+        <p className="text-main-secondary text-center w-2/3 max-lg:w-full max-lg:line-clamp-3">
           Different link apps, integrations, and visual styles can help you
           create an AvaLink that looks and feels like you and your brand.
           Explore our library of custom templates to grow and connect with your
@@ -25,48 +24,7 @@ export default function Templates() {
         <HeaderBtn />
       </div>
 
-      <div className="w-full mt-10 flex gap-4 flex-wrap">
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer   hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm  text-main-secondary font-geist">
-            All temapltes
-          </span>
-        </button>
-
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">
-            Fashion
-          </span>
-        </button>
-
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">
-            Health and fitness
-          </span>
-        </button>
-
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary  font-geist">
-            Marketing
-          </span>
-        </button>
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">Music</span>
-        </button>
-
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">Sports</span>
-        </button>
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">Sports</span>
-        </button>
-
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">Sports</span>
-        </button>
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
-          <span className="text-sm text-main-secondary font-geist">Sports</span>
-        </button>
-      </div>
+      <FilterList />
     </div>
   );
 }
