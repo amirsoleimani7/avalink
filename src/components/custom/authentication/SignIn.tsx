@@ -34,7 +34,6 @@ export default function SignIn() {
         <input
           type="text"
           id="name-input"
-          autoFocus
           placeholder="John Doe"
           className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-500 ease-in-out transition-all focus:outline-1 focus:outline-main-secondary border-none "
         />
@@ -48,7 +47,6 @@ export default function SignIn() {
           <input
             type="email"
             id="email-input"
-            autoFocus
             placeholder="m@example.com"
             className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-500 ease-in-out transition-all focus:outline-1 focus:outline-main-secondary border-none "
           />
