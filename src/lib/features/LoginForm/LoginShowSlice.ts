@@ -7,12 +7,15 @@ const ShowReducer = createSlice({
   reducers: {
     showLogin: (state) => {
       state.value = true;
-      console.log("show login ")
+
+      // adding overflow hidden so the use won't be able to scroll on login page
+      document.body.classList.add("overflow");
     },
     hideLogin: (state) => {
       state.value = false;
-      console.log("hide login ")
 
+      //same here
+      document.body.classList.remove("overflow");
     },
   },
 });

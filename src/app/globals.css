@@ -51,6 +51,10 @@
   scroll-behavior: smooth;
 }
 
+.overflow {
+  overflow: hidden;  
+}
+
 /* ------------------------- */
 @theme inline {
   --font-heading: var(--font-sans);

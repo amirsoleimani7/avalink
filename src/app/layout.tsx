@@ -25,14 +25,18 @@ export const metadata: Metadata = {
   description: "A plaform for sharing your social media links",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: LayoutProps<"/">) 
+{
+  
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <StoreProvider>
-        <body className="w-full h-screen flex flex-col">
+        <body
+          className={`body w-full h-screen flex flex-col`}
+        >
           <Navigation />
           {children}
           <Footer />
