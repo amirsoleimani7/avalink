@@ -1,6 +1,6 @@
 import { MdClose } from "react-icons/md";
 
-import { hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
+// import { hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 import { useAppDispatch } from "@/lib/hooks";
 import * as EmailValidator from "email-validator";
 import { useRef, useState } from "react";
@@ -30,7 +30,7 @@ export default function Login() {
         <button
           className="border rounded-full p-1.5 bg-main-hover duration-200 ease-in-out transition-all hover:bg-main-bg-1 cursor-pointer"
           onClick={() => {
-            dispatch(hideLogin());
+            // dispatch(hideLogin());
           }}
         >
           <MdClose size={20} />

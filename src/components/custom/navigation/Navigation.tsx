@@ -15,7 +15,7 @@ import SideBarNavigation from "./SideBarNavigation";
 
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
 import { showSide, hideSide } from "@/lib/features/Sidebar/SidebarSlice";
-import { showLogin, hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
+import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 
 export default function Navigation() {
   const showSide = useAppSelector((state) => state.side.value); // Read

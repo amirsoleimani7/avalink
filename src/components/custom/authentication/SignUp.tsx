@@ -1,10 +1,19 @@
 import { MdClose } from "react-icons/md";
+import { hideAll } from "@/lib/features/LoginForm/LoginShowSlice";
+import { useAppDispatch } from "@/lib/hooks";
 
 export default function SignUp() {
+  const dispatch = useAppDispatch();
+
   return (
     <div className={`flex flex-col gap-5 `}>
       <div className="w-full flex justify-end">
-        <button className="border rounded-full p-1.5 bg-main-hover duration-200 ease-in-out transition-all hover:bg-main-bg-1 cursor-pointer">
+        <button
+          className="border rounded-full p-1.5 bg-main-hover duration-200 ease-in-out transition-all hover:bg-main-bg-1 cursor-pointer"
+          onClick={() => {
+            dispatch(hideAll());
+          }}
+        >
           <MdClose size={20} />
         </button>
       </div>

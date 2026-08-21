@@ -1,24 +1,47 @@
 import { createSlice } from "@reduxjs/toolkit";
+// import { validate } from "email-validator";
 
 const ShowReducer = createSlice({
   name: "login",
-  initialState: { value: false },
+  initialState: {
+    LoginSec: false,
+    SignUpSec: false,
+    forgotSec: false,
+  },
 
   reducers: {
     showLogin: (state) => {
-      state.value = true;
-
-      // adding overflow hidden so the use won't be able to scroll on login page
+      state.LoginSec = true;
+      state.SignUpSec = false;
+      state.forgotSec = false;
       document.body.classList.add("overflow");
     },
-    hideLogin: (state) => {
-      state.value = false;
-
-      //same here
+    // hideLogin: (state) => {
+    //   state.LoginSec = false;
+    //   state.SignUpSec = false;
+    //   state.forgotSec = false;
+    //   document.body.classList.remove("overflow");
+    // },
+    showSignUp: (state) => {
+      state.LoginSec = false;
+      state.SignUpSec = true;
+      state.forgotSec = false;
+      document.body.classList.add("overflow");
+    },
+    showForgot: (state) => {
+      state.LoginSec = false;
+      state.SignUpSec = false;
+      state.forgotSec = true;
+      document.body.classList.add("overflow");
+    },
+    hideAll: (state) => {
+      state.LoginSec = false;
+      state.SignUpSec = false;
+      state.forgotSec = false;
       document.body.classList.remove("overflow");
     },
   },
 });
 
-export const { showLogin, hideLogin } = ShowReducer.actions;
+export const { showLogin , showSignUp,showForgot,hideAll } = ShowReducer.actions;
 export default ShowReducer.reducer;

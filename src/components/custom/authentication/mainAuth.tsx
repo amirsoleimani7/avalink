@@ -2,14 +2,14 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
-import { showLogin, hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
+import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 import { useEffect, useRef } from "react";
 import AnimateHeight from "react-animate-height";
 import Login from "./Login";
 import SignUp from "./SignUp";
 
 export default function mainAuth() {
-  const ShowLoginSec = useAppSelector((state) => state.show.value);
+  const ShowLoginSec = useAppSelector((state) => state.show.LoginSec);
   const LoginDiv = useRef<HTMLDivElement>(null);
 
   const dispatch = useAppDispatch();
@@ -21,7 +21,7 @@ export default function mainAuth() {
         !LoginDiv.current.contains(event.target as Node) &&
         ShowLoginSec
       ) {
-        dispatch(hideLogin());
+        // dispatch(hideLogin());
         console.log(ShowLoginSec);
       }
     }
