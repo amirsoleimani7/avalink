@@ -31,8 +31,10 @@ export default function Login() {
         />
       </div>
       <div className="font-geist flex flex-col">
-        <div className="flex justify-between"><label htmlFor="password-input text-sm ">Password</label>
-        <span className="hover:underline cursor-pointer">forgot pass</span></div>
+        <div className="flex justify-between">
+          <label htmlFor="password-input text-sm ">Password</label>
+          <span className="hover:underline cursor-pointer">forgot pass</span>
+        </div>
         <input
           type="password"
           id="password-input"
@@ -45,6 +47,10 @@ export default function Login() {
       <button className=" h-full  border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98]">
         <span className="text-sm text-white font-geist">Login with Google</span>
       </button>
+      <p className="font-geist text-center text-sm text-main-secondary">
+        Don't have an account?{" "}
+        <span className="underline text-main-secondary duration-200 ease-in-out transition-all hover:text-white cursor-pointer">Sign up</span>
+      </p>
     </div>
   );
 }
