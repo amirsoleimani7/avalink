@@ -8,7 +8,7 @@ import Footer from "@/components/custom/footer/Footer";
 
 export default async function Home() {
   return (
-    <div className="w-full relative flex flex-col relative">
+    <div className="w-full  flex flex-col relative">
       <HeroSection />
       <Properties />
       <Faq />

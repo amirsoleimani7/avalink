@@ -5,13 +5,14 @@ const ShowReducer = createSlice({
   initialState: { value: false },
 
   reducers: {
-    toggle: (state) => {
-      state.value = !state.value;
+    showLogin: (state) => {
+      state.value = true;
+    },
+    hideLogin: (state) => {
+      state.value = false;
     },
   },
 });
 
-
-export const { toggle } = ShowReducer.actions;
+export const { showLogin, hideLogin } = ShowReducer.actions;
 export default ShowReducer.reducer;
-

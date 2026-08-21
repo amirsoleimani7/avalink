@@ -7,28 +7,27 @@ import { MdClose } from "react-icons/md";
 import { MenuData, MenuType, MenuLink } from "@/data/menuData";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { hide, show } from "@/lib/features/Sidebar/SidebarSlice";
+import { hideSide, showSide } from "@/lib/features/Sidebar/SidebarSlice";
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
 
 export default function SideBarNavigation() {
-  const showSide = useAppSelector((state) => state.side.value);
+  const showSideSec = useAppSelector((state) => state.side.value);
   const dispatch = useAppDispatch();
 
   const handleShowSide = () => {
-    showSide === false ? dispatch(show()) : dispatch(hide());
+    showSideSec === false ? dispatch(showSide()) : dispatch(hideSide());
   };
-
   return (
     <div className="flex justify-center items-center">
       <button
         className="hidden  max-lg:flex items-center justify-center active:scale-[.98] cursor-pointer duration-200 ease-in-out transition-all"
         onClick={handleShowSide}
       >
-        {showSide ? <MdClose size={20} /> : <GiHamburgerMenu size={20} />}
+        {showSideSec ? <MdClose size={20} /> : <GiHamburgerMenu size={20} />}
       </button>
 
       <AnimatePresence>
-        {showSide && (
+        {showSideSec && (
           <motion.div
             initial={{ opacity: 0, filter: "blur(2px)", y: 3 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
@@ -58,7 +57,7 @@ export default function SideBarNavigation() {
                       key={index}
                       prefetch
                       onClick={() => {
-                        dispatch(hide());
+                        dispatch(hideSide());
                       }}
                     >
                       <p className="text-sm">{i.mLink}</p>

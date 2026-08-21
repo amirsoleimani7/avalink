@@ -14,14 +14,15 @@ import { MenuData, MenuType, MenuLink } from "@/data/menuData";
 import SideBarNavigation from "./SideBarNavigation";
 
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
-import { show, hide } from "@/lib/features/Sidebar/SidebarSlice";
+import { showSide, hideSide } from "@/lib/features/Sidebar/SidebarSlice";
+import { showLogin, hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 
 export default function Navigation() {
   const showSide = useAppSelector((state) => state.side.value); // Read
   const dispatch = useAppDispatch(); // Get remote control
 
   const handleSideBar = () => {
-    dispatch(hide());
+    dispatch(hideSide());
   };
 
   return (
