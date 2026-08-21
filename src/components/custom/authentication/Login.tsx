@@ -17,17 +17,16 @@ export default function Login() {
     console.log(
       `email is : ", ${emailRef.current?.value} => ${EmailValidator.validate(emailRef.current?.value || "")}`,
     );
-    toast.add({
-    
-    title: "Event created",
-      description: "Sunday, December 3 at 9:00 AM",
-      
-    });
+
+    // toast.add({
+    //   title: "Event created",
+    //   description: "Sunday, December 3 at 9:00 AM",
+    // });
   };
 
   return (
-    <div className="flex flex-col gap-5">
-      <div className="w-full flex justify-end ">
+    <div className={`flex flex-col gap-5 `}>
+      <div className="w-full flex justify-end">
         <button
           className="border rounded-full p-1.5 bg-main-hover duration-200 ease-in-out transition-all hover:bg-main-bg-1 cursor-pointer"
           onClick={() => {
@@ -42,7 +41,7 @@ export default function Login() {
         Enter your email below to login to your account
       </p>
       <div className="font-geist flex flex-col ">
-        <label htmlFor="email-input" className="text-sm">
+        <label htmlFor="email-input" className="text-sm font-bold">
           Email
         </label>
         <input
@@ -51,12 +50,12 @@ export default function Login() {
           id="email-input"
           autoFocus
           placeholder="m@example.com"
-          className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all focus:outline-1 focus:outline-main-secondary border-none "
+          className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-500 ease-in-out transition-all focus:outline-1 focus:outline-main-secondary border-none "
         />
       </div>
       <div className="font-geist flex flex-col">
         <div className="flex justify-between">
-          <label htmlFor="password-input" className="text-sm">
+          <label htmlFor="password-input" className="text-sm font-bold">
             Password
           </label>
           <span className="hover:underline cursor-pointer text-sm">

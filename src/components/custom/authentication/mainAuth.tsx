@@ -4,7 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
 import { showLogin, hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 import { useEffect, useRef } from "react";
+import AnimateHeight from "react-animate-height";
 import Login from "./Login";
+import SignUp from "./SignUp";
 
 export default function mainAuth() {
   const ShowLoginSec = useAppSelector((state) => state.show.value);
@@ -43,9 +45,10 @@ export default function mainAuth() {
               duration: 0.1,
             }}
             ref={LoginDiv}
-            className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-sm:w-full max-sm:mt-auto  p-5 border "
+            className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-sm:w-full max-sm:mt-auto max-sm:rounded-b-none  p-5 border "
           >
-            <Login />
+            {/* <Login /> */}
+            <SignUp />
           </motion.div>
         </div>
       )}
