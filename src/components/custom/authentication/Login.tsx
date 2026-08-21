@@ -2,9 +2,20 @@ import { MdClose } from "react-icons/md";
 
 import { hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 import { useAppDispatch } from "@/lib/hooks";
+import * as EmailValidator from "email-validator";
+import { useRef, useState } from "react";
 
 export default function Login() {
   const dispatch = useAppDispatch();
+
+  const [isValidEmail, setIsValidEmail] = useState<boolean>(true);
+  const emailRef = useRef<HTMLInputElement>(null);
+
+  const handleLogin = () => {
+    console.log(
+      `email is : ", ${emailRef.current?.value} => ${EmailValidator.validate(emailRef.current?.value || "")}`,
+    );
+  };
 
   return (
     <div className="flex flex-col gap-5">
@@ -27,11 +38,12 @@ export default function Login() {
           Email
         </label>
         <input
+          ref={emailRef}
           type="email"
           id="email-input"
           autoFocus
           placeholder="m@example.com"
-          className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all "
+          className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all focus:outline-1 focus:outline-main-secondary border-none "
         />
       </div>
       <div className="font-geist flex flex-col">
@@ -46,14 +58,17 @@ export default function Login() {
         <input
           type="password"
           id="password-input"
-          className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all"
+          className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all focus:outline-1 focus:outline-main-secondary border-none "
         />
       </div>
       <div className="flex flex-col gap-2">
-        <button className="h-10 bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] mb-1">
+        <button
+          className="h-10 bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] mb-1"
+          onClick={handleLogin}
+        >
           <span className="text-sm text-black font-geist">Login</span>
         </button>
-        <button className=" h-10 bg-main-bg-2   border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-main-bg-1 hover:outline-gray-700 active:scale-[.98]">
+        <button className=" h-10 bg-main-bg-2 border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-main-bg-1 hover:outline-gray-700 active:scale-[.98]">
           <span className="text-sm text-white font-geist">
             Login with Google
           </span>
