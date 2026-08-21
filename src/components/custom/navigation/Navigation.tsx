@@ -23,6 +23,7 @@ export default function Navigation() {
 
   const handleSideBar = () => {
     dispatch(hideSide());
+    window.scroll(0 , 0);
   };
 
   return (
