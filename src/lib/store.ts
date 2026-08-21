@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import ShowReducer from "./features/LoginForm/LoginShowSlice";
+import SideBarSlice from "./features/Sidebar/SidebarSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      show : ShowReducer
+      show: ShowReducer,
+      side: SideBarSlice,
     },
   });
 };

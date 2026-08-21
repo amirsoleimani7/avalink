@@ -7,16 +7,22 @@ import { MdClose } from "react-icons/md";
 import { MenuData, MenuType, MenuLink } from "@/data/menuData";
 import { motion, AnimatePresence } from "framer-motion";
 
+import { hide, show } from "@/lib/features/Sidebar/SidebarSlice";
+import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
+
 export default function SideBarNavigation() {
-  const [showSide, setShowSide] = useState(false);
+  const showSide = useAppSelector((state) => state.side.value);
+  const dispatch = useAppDispatch();
+
+  const handleShowSide = () => {
+    showSide === false ? dispatch(show()) : dispatch(hide());
+  };
 
   return (
     <div className="flex justify-center items-center">
       <button
         className="hidden  max-lg:flex items-center justify-center active:scale-[.98] cursor-pointer duration-200 ease-in-out transition-all"
-        onClick={() => {
-          setShowSide(!showSide);
-        }}
+        onClick={handleShowSide}
       >
         {showSide ? <MdClose size={20} /> : <GiHamburgerMenu size={20} />}
       </button>
@@ -52,7 +58,7 @@ export default function SideBarNavigation() {
                       key={index}
                       prefetch
                       onClick={() => {
-                        setShowSide(false);
+                        dispatch(hide());
                       }}
                     >
                       <p className="text-sm">{i.mLink}</p>
