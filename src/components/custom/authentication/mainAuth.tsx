@@ -45,7 +45,7 @@ export default function mainAuth() {
               duration: 0.1,
             }}
             ref={LoginDiv}
-            className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg-1 max-lg:w-full max-lg:mt-auto  p-5 border "
+            className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-lg:w-full max-lg:mt-auto  p-5 border "
           >
             <Login/>
           </motion.div>

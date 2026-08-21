@@ -6,7 +6,7 @@ import { useAppDispatch } from "@/lib/hooks";
 export default function Login() {
   const dispatch = useAppDispatch();
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <div className="w-full flex justify-end">
         <button
           className="border rounded-full p-1.5 bg-main-hover duration-200 ease-in-out transition-all hover:bg-main-bg-1 cursor-pointer"
@@ -27,15 +27,16 @@ export default function Login() {
           type="email"
           id="email-input"
           placeholder="m@example.com"
-          className="border rounded-lg mt-2 py-1 px-2"
+          className="border rounded-lg mt-2 py-1 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all"
         />
       </div>
       <div className="font-geist flex flex-col">
-        <label htmlFor="password-input text-sm ">Password</label>
+        <div className="flex justify-between"><label htmlFor="password-input text-sm ">Password</label>
+        <span className="hover:underline cursor-pointer">forgot pass</span></div>
         <input
           type="password"
           id="password-input"
-          className="border rounded-lg mt-2 py-1 px-2"
+          className="border rounded-lg mt-2 py-1 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all"
         />
       </div>
       <button className=" h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
