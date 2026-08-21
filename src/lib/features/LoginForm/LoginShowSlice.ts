@@ -7,9 +7,12 @@ const ShowReducer = createSlice({
   reducers: {
     showLogin: (state) => {
       state.value = true;
+      console.log("show login ")
     },
     hideLogin: (state) => {
       state.value = false;
+      console.log("hide login ")
+
     },
   },
 });
