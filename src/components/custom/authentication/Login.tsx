@@ -1,13 +1,13 @@
 import { MdClose } from "react-icons/md";
 
 // import { hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
-import { useAppDispatch } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import * as EmailValidator from "email-validator";
 import { useRef, useState } from "react";
-
-import { toast } from "@/components/ui/toast";
+import { hideAll, showSignUp } from "@/lib/features/LoginForm/LoginShowSlice";
 
 export default function Login() {
+  const LoginSec = useAppSelector((state) => state.show.LoginSec);
   const dispatch = useAppDispatch();
 
   const [isValidEmail, setIsValidEmail] = useState<boolean>(true);
@@ -30,7 +30,7 @@ export default function Login() {
         <button
           className="border rounded-full p-1.5 bg-main-hover duration-200 ease-in-out transition-all hover:bg-main-bg-1 cursor-pointer"
           onClick={() => {
-            // dispatch(hideLogin());
+            dispatch(hideAll());
           }}
         >
           <MdClose size={20} />
@@ -82,7 +82,12 @@ export default function Login() {
         </button>
         <p className="font-geist text-center text-sm text-main-secondary">
           Don't have an account?{" "}
-          <span className="underline text-main-secondary duration-200 ease-in-out transition-all hover:text-white cursor-pointer">
+          <span
+            className="underline text-main-secondary duration-200 ease-in-out transition-all hover:text-white cursor-pointer"
+            onClick={() => {
+              dispatch(showSignUp());
+            }}
+          >
             Sign up
           </span>
         </p>

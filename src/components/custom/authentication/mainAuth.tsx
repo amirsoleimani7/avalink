@@ -2,14 +2,18 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
-import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
+import { hideAll, showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 import { useEffect, useRef } from "react";
 import AnimateHeight from "react-animate-height";
 import Login from "./Login";
-import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 export default function mainAuth() {
-  const ShowLoginSec = useAppSelector((state) => state.show.LoginSec);
+  const ShowAuth = useAppSelector((state) => state.show.showAuth);
+  const LoginSec = useAppSelector((state) => state.show.LoginSec);
+  const SignUpSec = useAppSelector((state) => state.show.SignUpSec);
+  const forgotSec = useAppSelector((state) => state.show.forgotSec);
+
   const LoginDiv = useRef<HTMLDivElement>(null);
 
   const dispatch = useAppDispatch();
@@ -19,10 +23,9 @@ export default function mainAuth() {
       if (
         LoginDiv.current &&
         !LoginDiv.current.contains(event.target as Node) &&
-        ShowLoginSec
+        ShowAuth
       ) {
-        // dispatch(hideLogin());
-        console.log(ShowLoginSec);
+        // dispatch(hideAll());
       }
     }
 
@@ -31,11 +34,11 @@ export default function mainAuth() {
     return () => {
       document.removeEventListener("click", clickOutside);
     };
-  }, [LoginDiv, ShowLoginSec]);
+  }, [LoginDiv, ShowAuth]);
 
   return (
     <AnimatePresence>
-      {ShowLoginSec && (
+      {ShowAuth && (
         <div className="fixed inset-0 w-full h-full backdrop-blur-sm flex items-center justify-center z-20">
           <motion.div
             initial={{ opacity: 0, filter: "blur(2px)", y: 10 }}
@@ -47,8 +50,13 @@ export default function mainAuth() {
             ref={LoginDiv}
             className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-sm:w-full max-sm:mt-auto max-sm:rounded-b-none  p-5 border "
           >
-            {/* <Login /> */}
-            <SignUp />
+            <AnimateHeight
+              id="auth-section"
+              duration={200}
+              height={"auto"}
+            >
+              {LoginSec && <Login />} {SignUpSec && <SignIn />}
+            </AnimateHeight>
           </motion.div>
         </div>
       )}

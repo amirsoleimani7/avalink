@@ -15,7 +15,7 @@ import SideBarNavigation from "./SideBarNavigation";
 
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
 import { showSide, hideSide } from "@/lib/features/Sidebar/SidebarSlice";
-import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
+import { showLogin, showSignUp } from "@/lib/features/LoginForm/LoginShowSlice";
 
 export default function Navigation() {
   const showSide = useAppSelector((state) => state.side.value); // Read
@@ -76,7 +76,7 @@ export default function Navigation() {
           <button
             className=" h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
             onClick={() => {
-              dispatch(showLogin());
+              dispatch(showSignUp());
             }}
           >
             <span className="text-sm text-black font-geist">Sign up free</span>

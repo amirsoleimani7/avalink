@@ -4,6 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const ShowReducer = createSlice({
   name: "login",
   initialState: {
+    showAuth : false,
     LoginSec: false,
     SignUpSec: false,
     forgotSec: false,
@@ -11,30 +12,31 @@ const ShowReducer = createSlice({
 
   reducers: {
     showLogin: (state) => {
+      state.showAuth = true;
       state.LoginSec = true;
       state.SignUpSec = false;
       state.forgotSec = false;
       document.body.classList.add("overflow");
     },
-    // hideLogin: (state) => {
-    //   state.LoginSec = false;
-    //   state.SignUpSec = false;
-    //   state.forgotSec = false;
-    //   document.body.classList.remove("overflow");
-    // },
     showSignUp: (state) => {
+      
+      state.showAuth = true;
       state.LoginSec = false;
       state.SignUpSec = true;
       state.forgotSec = false;
       document.body.classList.add("overflow");
     },
     showForgot: (state) => {
+
+      state.showAuth = true;
       state.LoginSec = false;
       state.SignUpSec = false;
       state.forgotSec = true;
       document.body.classList.add("overflow");
     },
     hideAll: (state) => {
+
+      state.showAuth = false;
       state.LoginSec = false;
       state.SignUpSec = false;
       state.forgotSec = false;

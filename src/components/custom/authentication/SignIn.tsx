@@ -1,9 +1,13 @@
 import { MdClose } from "react-icons/md";
-import { hideAll } from "@/lib/features/LoginForm/LoginShowSlice";
-import { useAppDispatch } from "@/lib/hooks";
+import { hideAll, showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 
-export default function SignUp() {
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+
+export default function SignIn() {
+  const SignUpSec = useAppSelector((state) => state.show.SignUpSec);
+
   const dispatch = useAppDispatch();
+
 
   return (
     <div className={`flex flex-col gap-5 `}>
@@ -101,7 +105,10 @@ export default function SignUp() {
         </button>
         <p className="font-geist text-center text-sm text-main-secondary">
           Already have an account?{" "}
-          <span className="underline text-main-secondary duration-200 ease-in-out transition-all hover:text-white cursor-pointer">
+          <span className="underline text-main-secondary duration-200 ease-in-out transition-all hover:text-white cursor-pointer"
+          onClick={() => {
+            dispatch(showLogin());
+          }}>
             Sign In
           </span>
         </p>
