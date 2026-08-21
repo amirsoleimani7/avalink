@@ -5,6 +5,8 @@ import { useAppDispatch } from "@/lib/hooks";
 import * as EmailValidator from "email-validator";
 import { useRef, useState } from "react";
 
+import { toast } from "@/components/ui/toast";
+
 export default function Login() {
   const dispatch = useAppDispatch();
 
@@ -15,6 +17,12 @@ export default function Login() {
     console.log(
       `email is : ", ${emailRef.current?.value} => ${EmailValidator.validate(emailRef.current?.value || "")}`,
     );
+    toast.add({
+    
+    title: "Event created",
+      description: "Sunday, December 3 at 9:00 AM",
+      
+    });
   };
 
   return (

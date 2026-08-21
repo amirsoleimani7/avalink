@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navigation from "@/components/custom/navigation/Navigation";
 import Footer from "@/components/custom/footer/Footer";
 import StoreProvider from "./StoreProvider";
+import { Toaster } from "@/components/ui/toast";
 
 import "./globals.css";
 
@@ -25,19 +26,17 @@ export const metadata: Metadata = {
   description: "A plaform for sharing your social media links",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) 
-{
-  
+export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <StoreProvider>
-        <body
-          className={`body w-full h-screen flex flex-col`}
-        >
+        <body className={`body w-full h-screen flex flex-col`}>
           <Navigation />
+          <Toaster />
+
           {children}
           <Footer />
         </body>
