@@ -1,6 +1,12 @@
-
+"use client"
 import { HeroTags, HeroType } from "@/data/heroData";
+import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
+import { useAppDispatch } from "@/lib/hooks";
+
 export default function HeroSection() {
+  
+  const dispatch = useAppDispatch();
+
   return (
     <div className="flex flex-col gap-5 justify-center w-full py-10 mt-17 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%]">
       <div className="w-1/3 max-xl:w-3/5 max-md:w-4/5 max-sm:w-1/1 flex flex-col gap-4">
@@ -24,7 +30,12 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
-        <button className="w-50  mt-5 h-full bg-white px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
+        <button
+          className="w-50  mt-5 h-full bg-white px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
+          onClick={() => {
+            dispatch(showLogin());
+          }}
+        >
           <span className="text-sm text-black font-geist">
             Make your Profile
           </span>
