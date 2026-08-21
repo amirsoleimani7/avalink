@@ -26,7 +26,7 @@ const MyImageComponent = (props: imgPropsType) => {
         onError={() => {
           setImgError(true);
         }}
-        alt="A test image"
+        alt=""
         className={`object-cover   border-none duration-300 ease-in-out transition-all `}
       />
       {imgError && (

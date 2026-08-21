@@ -1,21 +1,15 @@
-"use client";
-
 import { useState } from "react";
 import MyImageComponent from "./ImgItem";
 
 export default function TemplateItem() {
-  const [imgLoad, setImageLoad] = useState<boolean>(true);
-  const [errorImg, setErrorImg] = useState<boolean>(false);
-  console.log("loading tempalte item");
-
   return (
     <div className=" group rounded-xl overflow-hidden border ">
       <div
         className={`w-full relative overflow-hidden transition-all  duration-200 ease-in-out `}
       >
-        <MyImageComponent url="https://placehold.o/600x400/000000/FFF" />
+        <MyImageComponent url="https://placehold.co/600x400/000000/FFF" />
       </div>
-
+      
       <div className="flex flex-col ">
         <div className="py-5 px-2 ">
           <div className="flex justify-between w-full mb-2">
