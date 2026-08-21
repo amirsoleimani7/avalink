@@ -72,11 +72,21 @@ export default function Navigation() {
           >
             <span className="text-sm text-white font-geist">Login</span>
           </button>
-          <button className=" h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
+          <button
+            className=" h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
+            onClick={() => {
+              dispatch(showLogin());
+            }}
+          >
             <span className="text-sm text-black font-geist">Sign up free</span>
           </button>
         </div>
-        <button className="hidden max-lg:flex items-center justify-center  h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
+        <button
+          className="hidden max-lg:flex items-center justify-center  h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
+          onClick={() => {
+            dispatch(showLogin());
+          }}
+        >
           <span className="text-sm text-black font-geist">Join us</span>
         </button>
         <SideBarNavigation />

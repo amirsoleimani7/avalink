@@ -17,7 +17,7 @@ export default function HeaderBtn(props: propsType) {
         <span className="text-sm text-black font-geist">Browse temapltes</span>
       </button>
       <Link prefetch href={"learn"}>
-        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98] ">
+        <button className="px-3 py-2 rounded-lg duration-200 ease-out cursor-pointer  hover:bg-main-hover active:scale-[.98]">
           <span className="text-sm text-white font-geist">Learn</span>
         </button>
       </Link>

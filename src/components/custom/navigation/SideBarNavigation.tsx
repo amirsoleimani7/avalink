@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { hideSide, showSide } from "@/lib/features/Sidebar/SidebarSlice";
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
-
+import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 export default function SideBarNavigation() {
   const showSideSec = useAppSelector((state) => state.side.value);
   const dispatch = useAppDispatch();
@@ -17,6 +17,7 @@ export default function SideBarNavigation() {
   const handleShowSide = () => {
     showSideSec === false ? dispatch(showSide()) : dispatch(hideSide());
   };
+
   return (
     <div className="flex justify-center items-center">
       <button
@@ -38,10 +39,22 @@ export default function SideBarNavigation() {
             className="absolute w-screen h-screen left-0 top-17 pt-4 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] hidden max-lg:flex flex-col backdrop-blur-2xl bg-black font-geist z-20"
           >
             <div className="flex w-full gap-2 mb-5 ">
-              <button className="w-1/3 h-full  border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98] ">
+              <button
+                className="w-1/3 h-full  border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98] "
+                onClick={() => {
+                  dispatch(hideSide());
+                  dispatch(showLogin());
+                }}
+              >
                 <span className="text-sm text-white font-geist">Login</span>
               </button>
-              <button className="w-2/3 h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">
+              <button
+                className="w-2/3 h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
+                onClick={() => {
+                  dispatch(hideSide());
+                  dispatch(showLogin());
+                }}
+              >
                 <span className="text-sm text-black font-geist ">
                   Sign up free
                 </span>
