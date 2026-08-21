@@ -30,7 +30,7 @@ export default function mainAuth() {
     }
 
     document.addEventListener("click", clickOutside);
-    
+
     return () => {
       document.removeEventListener("click", clickOutside);
     };
@@ -47,8 +47,9 @@ export default function mainAuth() {
               duration: 0.1,
             }}
             ref={authDiv}
-            className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-sm:w-full max-sm:mt-auto max-sm:rounded-b-none  p-5 border duration-200 ease-in-out transition-all"
+            className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-sm:w-full max-sm:mt-auto max-sm:rounded-b-none  p-5 pt-0 border duration-200 ease-in-out transition-all"
           >
+            <div className="w-1/4 h-2  mx-auto rounded-xl mt-2 hover:w-1/3 duration-200 ease-in-out transition-all cursor-pointer bg-main-bg-1 hover:bg-main-secondary"></div>
             {LoginSec && <Login />}
             {SignUpSec && <SignIn />}
           </motion.div>

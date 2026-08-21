@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { hideSide, showSide } from "@/lib/features/Sidebar/SidebarSlice";
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
-import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
+import { showLogin, showSignUp } from "@/lib/features/LoginForm/LoginShowSlice";
 export default function SideBarNavigation() {
   const showSideSec = useAppSelector((state) => state.side.value);
   const dispatch = useAppDispatch();
@@ -52,7 +52,7 @@ export default function SideBarNavigation() {
                 className="w-2/3 h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
                 onClick={() => {
                   dispatch(hideSide());
-                  dispatch(showLogin());
+                  dispatch(showSignUp());
                 }}
               >
                 <span className="text-sm text-black font-geist ">

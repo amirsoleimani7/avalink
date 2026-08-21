@@ -23,7 +23,7 @@ export default function Navigation() {
 
   const handleSideBar = () => {
     dispatch(hideSide());
-    window.scroll(0 , 0);
+    window.scroll(0, 0);
   };
 
   return (
@@ -68,6 +68,7 @@ export default function Navigation() {
           <button
             className=" h-full   border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98]"
             onClick={() => {
+              dispatch(hideSide());
               dispatch(showLogin());
             }}
           >
@@ -76,6 +77,7 @@ export default function Navigation() {
           <button
             className=" h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
             onClick={() => {
+              dispatch(hideSide());
               dispatch(showSignUp());
             }}
           >
@@ -85,6 +87,7 @@ export default function Navigation() {
         <button
           className="hidden max-lg:flex items-center justify-center  h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] "
           onClick={() => {
+            dispatch(hideSide());
             dispatch(showLogin());
           }}
         >
