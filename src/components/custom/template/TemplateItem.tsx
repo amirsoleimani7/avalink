@@ -1,34 +1,19 @@
 "use client";
 
 import { useState } from "react";
+import MyImageComponent from "./ImgItem";
 
 export default function TemplateItem() {
   const [imgLoad, setImageLoad] = useState<boolean>(true);
-  const [errorImg, setErrorImg] = useState<boolean>(true);
+  const [errorImg, setErrorImg] = useState<boolean>(false);
+  console.log("loading tempalte item");
 
   return (
     <div className=" group rounded-xl overflow-hidden border ">
       <div
-        className={`w-full relative overflow-hidden transition-all  duration-200 ease-in-out p-2`}
+        className={`w-full relative overflow-hidden transition-all  duration-200 ease-in-out `}
       >
-        <img
-          src="https://placehold.c/20x400/transparent/F00"
-          alt=""
-          onLoad={() => {
-            setImageLoad(false);
-            console.log("false load");
-          }}
-          onError={() => {
-            setErrorImg(true);
-            setImageLoad(false);
-          }}
-          className={`object-cover h-75 w-full  border-none duration-300 ease-in-out transition-all `}
-        />
-        {errorImg && (
-          <div className="absolute inset-0 w-full h-full bg-main-hover   font-geist flex items-center justify-center">
-            <span className="font-bold">error </span>
-          </div>
-        )}
+        <MyImageComponent url="https://placehold.o/600x400/000000/FFF" />
       </div>
 
       <div className="flex flex-col ">

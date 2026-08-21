@@ -21,7 +21,7 @@ export default function Templates() {
   useEffect(() => {
     setlocationY(FilterItem.current?.clientHeight || 0);
   }, []);
-  
+
   return (
     <div className="flex flex-col  items-center w-full  pt-10 mt-17 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%]">
       <div className="font-geist  flex flex-col gap-4 items-center">
@@ -41,10 +41,7 @@ export default function Templates() {
         <FilterList />
       </div>
 
-      <div
-        className="w-full gap-2  grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  my-5"
-        // ref={FilterItem}
-      >
+      <div className="w-full gap-2  grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  my-5">
         {listItem.map((item, index: number) => {
           return <TemplateItem key={index} />;
         })}
@@ -53,10 +50,3 @@ export default function Templates() {
   );
 }
 
-/*
-      <div className="w-full h-full grid grid-cols-2 gap-2">
-        {listItem.map(() => {
-          return <TemplateItem />;
-        })}
-      </div>
- */
