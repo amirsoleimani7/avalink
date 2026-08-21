@@ -33,7 +33,7 @@ export default function Login() {
   return (
     <AnimatePresence>
       {ShowLoginSec && (
-        <div className="absolute inset-0 w-full h-screen backdrop-blur-sm flex items-center justify-center  z-20">
+        <div className="fixed inset-0 w-full h-full backdrop-blur-sm flex items-center justify-center  z-20">
           <motion.div
             initial={{ opacity: 0, filter: "blur(2px)", y: 10 }}
             animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}

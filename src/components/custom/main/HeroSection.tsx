@@ -1,10 +1,9 @@
-"use client"
+"use client";
 import { HeroTags, HeroType } from "@/data/heroData";
 import { showLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 import { useAppDispatch } from "@/lib/hooks";
 
 export default function HeroSection() {
-  
   const dispatch = useAppDispatch();
 
   return (
