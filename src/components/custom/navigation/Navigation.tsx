@@ -17,7 +17,7 @@ import { useState } from "react";
 
 
 import { useAppSelector, useAppDispatch, useAppStore } from "@/lib/hooks";
-import {  toggle } from "@/lib/features/LoginShowSlice";
+import {  toggle } from "@/lib/features/LoginForm/LoginShowSlice";
 
 
 export default function Navigation() {
@@ -25,7 +25,7 @@ export default function Navigation() {
 
   const show = useAppSelector((state) => state.show.value); // Read
   const dispatch = useAppDispatch(); // Get remote control
-
+  
   const handleStuff = () => {
     dispatch(toggle());
   };

@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import ShowReducer from "./features/LoginShowSlice";
+import ShowReducer from "./features/LoginForm/LoginShowSlice";
 
 export const makeStore = () => {
   return configureStore({
