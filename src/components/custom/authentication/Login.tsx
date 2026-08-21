@@ -2,16 +2,9 @@ import { MdClose } from "react-icons/md";
 
 import { hideLogin } from "@/lib/features/LoginForm/LoginShowSlice";
 import { useAppDispatch } from "@/lib/hooks";
-import { useEffect, useRef } from "react";
 
 export default function Login() {
   const dispatch = useAppDispatch();
-  const EmailInputRef = useRef<HTMLInputElement>(null);
-  
-  useEffect(() => {
-    EmailInputRef.current?.focus();
-
-  }, []);
 
   return (
     <div className="flex flex-col gap-5">
@@ -36,8 +29,7 @@ export default function Login() {
         <input
           type="email"
           id="email-input"
-        //   autoFocus
-          ref={EmailInputRef}
+          autoFocus
           placeholder="m@example.com"
           className="border rounded-lg mt-1 py-2 px-2 bg-main-bg-2 duration-200 ease-in-out transition-all "
         />
