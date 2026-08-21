@@ -22,7 +22,7 @@ export default function TemplateItem() {
             setErrorImg(true);
             setImageLoad(false);
           }}
-          className={`object-cover h-[300px] w-full   border-none duration-300 ease-in-out transition-all `}
+          className={`object-cover h-75 w-full  border-none duration-300 ease-in-out transition-all `}
         />
         {errorImg && (
           <div className="absolute inset-0 w-full h-full bg-main-hover   font-geist flex items-center justify-center">

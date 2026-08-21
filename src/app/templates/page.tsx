@@ -1,18 +1,27 @@
+"use client";
 import { Metadata } from "next";
 
 import HeaderBtn from "@/components/custom/template/HeaderButtons/HeaderBtn";
 import FilterList from "@/components/custom/template/FilterList";
 import TemplateItem from "@/components/custom/template/TemplateItem";
 import { number } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
-export const metadata: Metadata = {
-  title: "Templates",
-  description: "A libray with different avalink temapltes",
-};
+// export const metadata: Metadata = {
+//   title: "Templates",
+//   description: "A libray with different avalink temapltes",
+// };
 
 const listItem = [1, 2, 3, , 2, 3, 3, 4, 4];
 
 export default function Templates() {
+  const FilterItem = useRef<HTMLDivElement>(null);
+  const [locationY, setlocationY] = useState<number>(0);
+
+  useEffect(() => {
+    setlocationY(FilterItem.current?.clientHeight || 0);
+  }, []);
+  
   return (
     <div className="flex flex-col  items-center w-full  pt-10 mt-17 px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%]">
       <div className="font-geist  flex flex-col gap-4 items-center">
@@ -25,10 +34,17 @@ export default function Templates() {
           Explore our library of custom templates to grow and connect with your
           audience even more easily!
         </p>
-        <HeaderBtn />
+        <HeaderBtn itemsy={locationY} />
       </div>
-      <FilterList />
-      <div className="w-full gap-2  grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  my-5">
+
+      <div ref={FilterItem}>
+        <FilterList />
+      </div>
+
+      <div
+        className="w-full gap-2  grid grid-cols-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1  my-5"
+        // ref={FilterItem}
+      >
         {listItem.map((item, index: number) => {
           return <TemplateItem key={index} />;
         })}
