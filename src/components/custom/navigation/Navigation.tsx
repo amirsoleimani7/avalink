@@ -1,3 +1,5 @@
+"use client";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,8 +12,12 @@ import {
 import Link from "next/link";
 import { MenuData, MenuType, MenuLink } from "@/data/menuData";
 import SideBarNavigation from "./SideBarNavigation";
+import Login from "../authentication/Login";
+import { useState } from "react";
 
 export default function Navigation() {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
     <div className="fixed w-full z-10 backdrop-blur-2xl border-b  text-white flex items py-4  px-[15%] max-xl:px-[10%] max-md:px-[8%] max-sm:px-[4%] justify-between select-none">
       <Link href={"/"} prefetch>
@@ -48,10 +54,13 @@ export default function Navigation() {
           </NavigationMenuList>
         </NavigationMenu>
       </div>
-
+      {showLogin && <Login/>}
       <div className="flex gap-5">
         <div className="flex gap-2 max-lg:hidden">
-          <button className=" h-full   border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98] ">
+          <button className=" h-full   border-none outline outline-gray-800 px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-black/70 hover:outline-gray-700 active:scale-[.98]"
+          onClick={() => {
+            setShowLogin(true);
+          }}>
             <span className="text-sm text-white font-geist">Login</span>
           </button>
           <button className=" h-full bg-white px-2 py-1 rounded-lg duration-200 ease-out cursor-pointer  hover:inset-shadow-md hover:bg-gray-200 active:scale-[.98] ">

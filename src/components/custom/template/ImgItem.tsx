@@ -20,14 +20,14 @@ const MyImageComponent = (props: imgPropsType) => {
   }
 
   return (
-    <div className="w-full h-75 relative">
+    <div className="w-full h-75 relative overflow-hidden">
       <img
         src={imageSrc}
         onError={() => {
           setImgError(true);
         }}
         alt=""
-        className={`object-cover   border-none duration-300 ease-in-out transition-all `}
+        className={`object-cover w-full h-full  border-none duration-300 ease-in-out transition-all hover:scale-105`}
       />
       {imgError && (
         <div className="w-full h-full absolute inset-0 z-10 flex bg-main-bg-1 font-geist items-center justify-center font-bold">
