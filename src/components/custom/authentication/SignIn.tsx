@@ -10,7 +10,7 @@ export default function SignIn() {
 
 
   return (
-    <div className={`flex flex-col gap-5 `}>
+    <div className={`flex flex-col gap-5 mt-5 max-sm:mt-0`}>
       <div className="w-full flex justify-end">
         <button
           className="border rounded-full p-1.5 bg-main-hover duration-200 ease-in-out transition-all hover:bg-main-bg-1 cursor-pointer"

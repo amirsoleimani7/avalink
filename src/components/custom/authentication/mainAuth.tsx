@@ -8,7 +8,7 @@ import AnimateHeight from "react-animate-height";
 import Login from "./Login";
 import SignIn from "./SignIn";
 
-export default function mainAuth() {
+export default function MainAuth() {
   const ShowAuth = useAppSelector((state) => state.show.showAuth);
   const LoginSec = useAppSelector((state) => state.show.LoginSec);
   const SignUpSec = useAppSelector((state) => state.show.SignUpSec);
@@ -49,7 +49,7 @@ export default function mainAuth() {
             ref={authDiv}
             className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-sm:w-full max-sm:mt-auto max-sm:rounded-b-none  p-5 pt-0 border duration-200 ease-in-out transition-all"
           >
-            <div className="w-1/4 h-2  mx-auto rounded-xl mt-2 hover:w-1/3 duration-200 ease-in-out transition-all cursor-pointer bg-main-bg-1 hover:bg-main-secondary"></div>
+            <div draggable className="hidden max-sm:block w-1/4 h-2  mx-auto rounded-xl mt-2 hover:w-1/3 duration-200 ease-in-out transition-all cursor-pointer bg-main-bg-1 hover:bg-main-secondary hover:scale-110"></div>
             {LoginSec && <Login />}
             {SignUpSec && <SignIn />}
           </motion.div>

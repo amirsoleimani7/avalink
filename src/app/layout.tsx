@@ -4,6 +4,7 @@ import Navigation from "@/components/custom/navigation/Navigation";
 import Footer from "@/components/custom/footer/Footer";
 import StoreProvider from "./StoreProvider";
 import { Toaster } from "@/components/ui/toast";
+import MainAuth from "@/components/custom/authentication/mainAuth";
 
 import "./globals.css";
 
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <body className={`body w-full h-screen flex flex-col`}>
           <Navigation />
           <Toaster />
-
+          <MainAuth />
           {children}
           <Footer />
         </body>
