@@ -7,13 +7,14 @@ import { useEffect, useRef, useState } from "react";
 import AnimateHeight from "react-animate-height";
 import Login from "./Login";
 import SignIn from "./SignIn";
+import Forgot from "./Forgot";
 
 export default function MainAuth() {
   const ShowAuth = useAppSelector((state) => state.show.showAuth);
   const LoginSec = useAppSelector((state) => state.show.LoginSec);
   const SignUpSec = useAppSelector((state) => state.show.SignUpSec);
   const forgotSec = useAppSelector((state) => state.show.forgotSec);
-
+  
   const authDiv = useRef<HTMLDivElement>(null);
 
   const dispatch = useAppDispatch();
@@ -52,6 +53,7 @@ export default function MainAuth() {
             <div draggable className="hidden max-sm:block w-1/4 h-2  mx-auto rounded-xl mt-2 hover:w-1/3 duration-200 ease-in-out transition-all cursor-pointer bg-main-bg-1 hover:bg-main-secondary hover:scale-110"></div>
             {LoginSec && <Login />}
             {SignUpSec && <SignIn />}
+            {forgotSec && <Forgot/>}
           </motion.div>
         </div>
       )}

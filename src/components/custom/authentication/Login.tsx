@@ -4,7 +4,11 @@ import { MdClose } from "react-icons/md";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import * as EmailValidator from "email-validator";
 import { useRef, useState } from "react";
-import { hideAll, showSignUp } from "@/lib/features/LoginForm/LoginShowSlice";
+import {
+  hideAll,
+  showForgot,
+  showSignUp,
+} from "@/lib/features/LoginForm/LoginShowSlice";
 
 export default function Login() {
   const LoginSec = useAppSelector((state) => state.show.LoginSec);
@@ -58,7 +62,12 @@ export default function Login() {
           <label htmlFor="password-input" className="text-sm font-bold">
             Password
           </label>
-          <span className="hover:underline cursor-pointer text-sm">
+          <span
+            className="hover:underline cursor-pointer text-sm"
+            onClick={() => {
+              dispatch(showForgot());
+            }}
+          >
             forgot pass
           </span>
         </div>
