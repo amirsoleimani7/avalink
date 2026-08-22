@@ -14,7 +14,7 @@ export default function MainAuth() {
   const LoginSec = useAppSelector((state) => state.show.LoginSec);
   const SignUpSec = useAppSelector((state) => state.show.SignUpSec);
   const forgotSec = useAppSelector((state) => state.show.forgotSec);
-  
+
   const authDiv = useRef<HTMLDivElement>(null);
 
   const dispatch = useAppDispatch();
@@ -26,16 +26,17 @@ export default function MainAuth() {
         !authDiv.current.contains(event.target as Node) &&
         ShowAuth
       ) {
-        // dispatch(hideAll());
+        dispatch(hideAll());
       }
     }
 
-    document.addEventListener("click", clickOutside);
+    document.addEventListener("mousedown", clickOutside);
 
     return () => {
-      document.removeEventListener("click", clickOutside);
+      document.removeEventListener("mousedown", clickOutside);
     };
   }, [authDiv, ShowAuth]);
+
   return (
     <AnimatePresence>
       {ShowAuth && (
@@ -46,21 +47,22 @@ export default function MainAuth() {
             exit={{ opacity: 0, filter: "blur(2px)", y: -10 }}
             transition={{
               duration: 0.1,
+              type: "tween",
+              ease: "easeInOut",
             }}
             ref={authDiv}
             className="flex flex-col rounded-xl top-1/2 left-1/2  w-100  bg-main-bg max-sm:w-full max-sm:mt-auto max-sm:rounded-b-none  p-5 pt-0 border duration-200 ease-in-out transition-all"
           >
-            <div draggable className="hidden max-sm:block w-1/4 h-2  mx-auto rounded-xl mt-2 hover:w-1/3 duration-200 ease-in-out transition-all cursor-pointer bg-main-bg-1 hover:bg-main-secondary hover:scale-110"></div>
+            <div
+              draggable
+              className="hidden max-sm:block w-1/5 h-2  mx-auto rounded-xl mt-2 hover:w-1/4 duration-200 ease-in-out transition-all cursor-pointer bg-main-bg-1 hover:bg-main-secondary hover:scale-110"
+            ></div>
             {LoginSec && <Login />}
             {SignUpSec && <SignIn />}
-            {forgotSec && <Forgot/>}
+            {forgotSec && <Forgot />}
           </motion.div>
         </div>
       )}
     </AnimatePresence>
   );
 }
-
-/*
-
- */

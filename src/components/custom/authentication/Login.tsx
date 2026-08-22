@@ -93,7 +93,7 @@ export default function Login() {
           Don't have an account?{" "}
           <span
             className="underline text-main-secondary duration-200 ease-in-out transition-all hover:text-white cursor-pointer"
-            onClick={() => {
+            onClick={(e) => {
               dispatch(showSignUp());
             }}
           >
